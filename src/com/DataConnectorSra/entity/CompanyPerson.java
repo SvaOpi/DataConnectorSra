@@ -27,6 +27,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "CompanyPerson.findAll", query = "SELECT c FROM CompanyPerson c"),
     @NamedQuery(name = "CompanyPerson.findByCompaniesId", query = "SELECT c FROM CompanyPerson c WHERE c.companyPersonPK.companiesId = :companiesId"),
     @NamedQuery(name = "CompanyPerson.findByPersonsCedule", query = "SELECT c FROM CompanyPerson c WHERE c.companyPersonPK.personsCedule = :personsCedule"),
+    @NamedQuery(name = "CompanyPerson.findByCompaniesPersons", query = "SELECT c FROM CompanyPerson c WHERE c.companyPersonPK.personsCedule = :personsCedule and c.companyPersonPK.companiesId = :companiesId"),
     @NamedQuery(name = "CompanyPerson.findByRol", query = "SELECT c FROM CompanyPerson c WHERE c.rol = :rol")})
 public class CompanyPerson implements Serializable {
     private static final long serialVersionUID = 1L;
